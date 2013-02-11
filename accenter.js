@@ -34,22 +34,12 @@ Plugin.prototype.init = function () {
 			alt = letters[input.toLowerCase()],  // find it there is a unaccented alternative =
 			output = input,
 			elClass = ''; // class that will be applied to separated character
-			upper = false;
 
 			// if unaccented alternative extis
 			if ( typeof alt !== 'undefined' ) {
 				output = alt['alt'];
-				elClass = alt['type'];
-				tall = input == input.toUpperCase();
-
-				// tall letters that require specal caron
-				if ( (output == 'l' |  output == 't') && !upper ) {
-					elClass += ' tall';
-				}
-				if ( output == 'd' && !upper ) {
-					elClass += ' talld';
-				}
-				if ( upper )
+				elClass = alt['elClass'];
+				if ( input == input.toUpperCase() )
 				{
 					elClass += ' upper';
 					output = output.toUpperCase();

@@ -24,24 +24,24 @@
 	<script>
 
 		var letters = {
-			'á': { alt: 'a', type: 'a_acute' },
-			'ä': { alt: 'a', type: 'a_diaeres' },
-			'č': { alt: 'c', type: 'a_caron' },
-			'ď': { alt: 'd', type: 'a_caron' },
-			'ž': { alt: 'z', type: 'a_caron' },
-			'é': { alt: 'e', type: 'a_acute' },
-			'í': { alt: 'ı', type: 'a_acute' }, // dotless i !
-			'ĺ': { alt: 'l', type: 'a_acute' },
-			'ľ': { alt: 'l', type: 'a_caron' },
-			'ň': { alt: 'n', type: 'a_caron' },
-			'ó': { alt: 'o', type: 'a_acute' },
-			'ô': { alt: 'o', type: 'a_cirkum' },
-			'ŕ': { alt: 'r', type: 'a_acute' },
-			'š': { alt: 's', type: 'a_caron' },
-			'ť': { alt: 't', type: 'a_caron' },
-			'ú': { alt: 'u', type: 'a_acute' },
-			'ý': { alt: 'y', type: 'a_acute' },
-			'ž': { alt: 'z', type: 'a_caron' }
+			'á': { alt: 'a', elClass: 'a_acute' },
+			'ä': { alt: 'a', elClass: 'a_diaeres' },
+			'č': { alt: 'c', elClass: 'a_caron' },
+			'ď': { alt: 'd', elClass: 'a_caron talld' },
+			'ž': { alt: 'z', elClass: 'a_caron' },
+			'é': { alt: 'e', elClass: 'a_acute' },
+			'í': { alt: 'ı', elClass: 'a_acute' }, // dotless i !
+			'ĺ': { alt: 'l', elClass: 'a_acute tall' },
+			'ľ': { alt: 'l', elClass: 'a_caron tall' },
+			'ň': { alt: 'n', elClass: 'a_caron' },
+			'ó': { alt: 'o', elClass: 'a_acute' },
+			'ô': { alt: 'o', elClass: 'a_cirkum' },
+			'ŕ': { alt: 'r', elClass: 'a_acute' },
+			'š': { alt: 's', elClass: 'a_caron' },
+			'ť': { alt: 't', elClass: 'a_caron tall' },
+			'ú': { alt: 'u', elClass: 'a_acute' },
+			'ý': { alt: 'y', elClass: 'a_acute' },
+			'ž': { alt: 'z', elClass: 'a_caron' }
 		}
 
 		$('div').accenter(letters);
