@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Accenter Test</title>
+	<link rel="stylesheet"href="../accenter.css">
+	<link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+</head>
+<style>
+	div	{
+		font-family: 'Lora', serif;
+		font-size: 40px;
+		line-height: 70px;
+		visibility: hidden;
+	}
+</style>
+<body>
+
+	<div>Nezvyčajné kŕdle šťastných figliarskych ďatľov učia pri kótovanom ústí Váhu mĺkveho koňa Waldemara obžierať väčšie kusy exkluzívnej kôry</div>
+
+</body>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" ></script>
+	<script src="../accenter.js" ></script>
+	<script>
+
+		var letters = {
+			'á': { alt: 'a', type: 'a_acute' },
+			'ä': { alt: 'a', type: 'a_diaeres' },
+			'č': { alt: 'c', type: 'a_caron' },
+			'ď': { alt: 'd', type: 'a_caron' },
+			'ž': { alt: 'z', type: 'a_caron' },
+			'é': { alt: 'e', type: 'a_acute' },
+			'í': { alt: 'ı', type: 'a_acute' }, // dotless i !
+			'ĺ': { alt: 'l', type: 'a_acute' },
+			'ľ': { alt: 'l', type: 'a_caron' },
+			'ň': { alt: 'n', type: 'a_caron' },
+			'ó': { alt: 'o', type: 'a_acute' },
+			'ô': { alt: 'o', type: 'a_cirkum' },
+			'ŕ': { alt: 'r', type: 'a_acute' },
+			'š': { alt: 's', type: 'a_caron' },
+			'ť': { alt: 't', type: 'a_caron' },
+			'ú': { alt: 'u', type: 'a_acute' },
+			'ý': { alt: 'y', type: 'a_acute' },
+			'ž': { alt: 'z', type: 'a_caron' }
+		}
+
+		$('div').accenter(letters);
+
+	</script>
+</html>
