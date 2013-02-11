@@ -4,18 +4,25 @@
 	<meta charset="utf-8">
 	<title>Accenter Test</title>
 	<link rel="stylesheet"href="../accenter.css">
-	<link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 </head>
 <style>
 	div	{
-		font-family: 'Lora', serif;
+		font-family: 'Raleway', sans-serif;
 		font-size: 40px;
 		line-height: 70px;
+	}
+	div:first-child {
+		margin-bottom: 100px;
 		visibility: hidden;
+	}
+	div span:after {
+		font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
 	}
 </style>
 <body>
 
+	<div>Nezvyčajné kŕdle šťastných figliarskych ďatľov učia pri kótovanom ústí Váhu mĺkveho koňa Waldemara obžierať väčšie kusy exkluzívnej kôry</div>
 	<div>Nezvyčajné kŕdle šťastných figliarskych ďatľov učia pri kótovanom ústí Váhu mĺkveho koňa Waldemara obžierať väčšie kusy exkluzívnej kôry</div>
 
 </body>
@@ -44,7 +51,7 @@
 			'ž': { alt: 'z', elClass: 'a_caron' }
 		}
 
-		$('div').accenter(letters);
+		$('div:first-child').accenter(letters);
 
 	</script>
 </html>

@@ -2,12 +2,13 @@
 	position: relative;
 }
 .a_acute:after, .a_caron:after,.a_diaeres:after,.a_cirkum:after {
-	position: absolute;
+	/* offset of lowercase letters */
 	top: -12px;
+
+	position: absolute;
 	left: 0;
 	width: 100%;
 	text-align: center;
-	font-family: "Times New Roman", serif;
 	/* font stack with diacritical marks that looks the same goes here! */
 }
 .a_acute:after {
@@ -23,9 +24,9 @@
 .a_cirkum:after {
 	content: "ˆ";
 }
-/* offset of marks placed above uppercase letters */
 .upper:after,
 .tall.a_acute:after {
+	/* offset of marks placed above uppercase letters */
 	top: -22px;
 }
 
@@ -35,8 +36,10 @@
 	margin-right: 0.15em;
 }
 .tall.a_caron:after, .talld.a_caron:after {
-	content: "ʼ";
+	/* offset of tall letters with caron */
 	top: -15px;
+
+	content: "ʼ";
 	left: 0.15em;
 	font-size: 0.95em;
 }
