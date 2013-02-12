@@ -1,49 +1,54 @@
-.a_acute,.a_caron,.a_diaeres,.a_cirkum {
+._acute_accent,._caron,._diaeresis,._cirkumflex {
 	position: relative;
 }
-.a_acute:after, .a_caron:after,.a_diaeres:after,.a_cirkum:after {
-	/* offset of lowercase letters */
-	top: -12px;
 
+/* offset of lowercase letters */
+._acute_accent:after, ._caron:after,._diaeresis:after,._cirkumflex:after {
+	top: -24%;
 	position: absolute;
 	left: 0;
 	width: 100%;
 	text-align: center;
 	/* font stack with diacritical marks that looks the same goes here! */
 }
-.a_acute:after {
-	content: "´";
-}
-.a_caron:after {
-	content: "ˇ";
-}
-.a_diaeres:after {
-	content: "¨";
-	left: -2px;
-}
-.a_cirkum:after {
-	content: "ˆ";
-}
-.upper:after,
-.tall.a_acute:after {
-	/* offset of marks placed above uppercase letters */
-	top: -22px;
+._acute_accent:after { content: "´"; }
+._caron:after { content: "ˇ"; }
+._diaeresis:after { content: "¨"; }
+._cirkumflex:after { content: "ˆ"; }
+/* Add other marks here */
+
+/* offset of marks placed above uppercase letters */
+._acute_accent.upper:after,
+._caron.upper:after,
+._diaeresis.upper:after,
+._cirkumflex.upper:after,
+._acute_accent._l:after {
+	top: -43%;
 }
 
-/* Solving the issue of caron witch is actually apostrophe on tall letters */
-/* sorry kerning :( */
-.tall.a_caron {
+/* Special cases ------------------------ */
+/* varies in this section can be very denpenedn on your font */
+
+/* Solving the issue of caron witch is actually apostrophe on tall letters like L,l,d */
+._caron._l,
+._caron._d,
+._caron._t {
+	/* sorry kerning :( margin to compensate */
 	margin-right: 0.15em;
 }
-.tall.a_caron:after, .talld.a_caron:after {
-	/* offset of tall letters with caron */
-	top: -15px;
-
+._caron._l:after,
+._caron._d:after,
+._caron._t:after,
+._caron.upper._L:after {
 	content: "ʼ";
-	left: 0.15em;
 	font-size: 0.95em;
+	top: -32%;
 }
-/* d is just different */
-.talld.a_caron:after {
+._caron._l:after,
+._caron.upper._L:after,
+._caron._t:after {
+	left: 0.15em;
+}
+._caron._d:after {
 	left: 0.35em;
 }
