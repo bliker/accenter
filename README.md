@@ -3,7 +3,7 @@ Accenter
 
 You know the situation. You just fell in love with some amazing and detailed free font, but it does not support your regional characters.
 
-Until now, only thing you could do is to find other _(usually worse)_ alternative to one that you found. Sometimes even the the fonts that claim to be Latin Extended does not contain characters like ľ.
+Until now, only thing you could do is to find other _(usually worse)_ alternative to one that you found. Sometimes even the the fonts that claim to be Latin Extended do not contain characters like ľ.
 
 __This plugin totally solves that__
 
