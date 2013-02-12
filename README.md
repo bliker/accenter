@@ -12,7 +12,7 @@ __This plugin totally solves that__
 
 You provide letters, it provides clasess.
 
-  $('div').accenter({
+	$('div').accenter({
 		'á': {'a', mark: 'acute_accent' },
 		'ä': { alt: 'a', mark: 'diaeresis' },
 		'č': { alt: 'c', mark: 'caron' },
