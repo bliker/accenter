@@ -7,6 +7,7 @@ Until now, only thing you could do is to find other _(usually worse)_ alternativ
 
 __This plugin totally solves that__
 
+demo? [Demo!](http://samuelvasko.tk/accenter/)
 
 ### How does is work
 
