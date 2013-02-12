@@ -33,19 +33,28 @@ Plugin.prototype.init = function () {
 		var input = inputText[i],
 			alt = letters[input.toLowerCase()],  // find it there is a unaccented alternative =
 			output = input,
+			uppercase = input == input.toUpperCase(),
 			elClass = ''; // class that will be applied to separated character
 
 			// if unaccented alternative extis
 			if ( typeof alt !== 'undefined' ) {
-				output = alt['alt'];
-				elClass = alt['elClass'];
-				if ( input == input.toUpperCase() )
+				output = alt[0]; // letter
+				elClass = alt[1]; // mark
+				if ( uppercase )
 				{
 					elClass += ' upper';
 					output = output.toUpperCase();
 				}
+				if ( output == 't') elClass += ' _t';
+				if ( output == 'l' ) elClass += ' _l';
+				if ( output == 'L' ) elClass += ' _L';
+				if ( output == 'd' ) elClass += ' _d';
+
+				// user defined extra class
+				if ( typeof alt[2] !== 'undefined' ) elClass += ' ' + alt[2];
+
 				// create element containing that letter
-				output = '<span class="'+ elClass +'">'+output+'</span>';
+				output = '<span class="_'+ elClass +'">'+output+'</span>';
 				inputText[i] = output;
 			}
 			modified += output;
